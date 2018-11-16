@@ -105,6 +105,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: new ListView(
           children: <Widget>[
+            new Image.asset(
+              'images/mountain.jpg',
+              height: 240.0,
+              fit: BoxFit.cover,
+            ),
             titleSection,
             buttonSection,
             textSection,
