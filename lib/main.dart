@@ -50,14 +50,14 @@ class MyApp extends StatelessWidget {
                 new Container(
                   padding: const EdgeInsets.only(bottom: 8.0),
                   child: new Text(
-                    '绿地蓝海',
+                    '长城',
                     style: new TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 new Text(
-                  '绿地集团下的办公楼',
+                  '不到长城非好汉',
                   style: new TextStyle(
                     color: Colors.grey[500],
                   ),
@@ -87,6 +87,16 @@ class MyApp extends StatelessWidget {
       ),
     );
 
+    Widget textSection = new Container(
+      padding: const EdgeInsets.all(32.0),
+      child: new Text(
+        '''
+         长城（Great Wall），又称万里长城，是中国古代的军事防御工程，是一道高大、坚固而连绵不断的长垣，用以限隔敌骑的行动。长城不是一道单纯孤立的城墙，而是以城墙为主体，同大量的城、障、亭、标相结合的防御体系。
+        ''',
+        softWrap: true,
+      ),
+    );
+
     return new MaterialApp(
       title: 'Flutter Demo',
       theme: new ThemeData(
@@ -97,6 +107,7 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
             titleSection,
             buttonSection,
+            textSection,
           ],
         ),
       ),
