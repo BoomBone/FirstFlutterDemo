@@ -6,6 +6,30 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    Column buildButtonColumn(IconData icon, String label) {
+      Color color = Theme.of(context).primaryColor;
+      return new Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          new Icon(
+            icon,
+            color: color,
+          ),
+          new Container(
+            margin: const EdgeInsets.only(top: 8.0),
+            child: new Text(
+              label,
+              style: new TextStyle(
+                fontSize: 12.0,
+                fontWeight: FontWeight.w400,
+                color: color,
+              ),
+            ),
+          )
+        ],
+      );
+    }
 
     /**
      * 创建标题栏：包含三部分1.Icon,2.Text,3.Title section
@@ -52,6 +76,30 @@ class MyApp extends StatelessWidget {
       ),
     );
 
-    return null;
+    Widget buttonSection = new Container(
+      child: new Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          buildButtonColumn(Icons.call, 'Call'),
+          buildButtonColumn(Icons.near_me, 'ROUTE'),
+          buildButtonColumn(Icons.share, 'SHARE'),
+        ],
+      ),
+    );
+
+    return new MaterialApp(
+      title: 'Flutter Demo',
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Scaffold(
+        body: new ListView(
+          children: <Widget>[
+            titleSection,
+            buttonSection,
+          ],
+        ),
+      ),
+    );
   }
 }
