@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'daily_test.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(DailyTest());
+}
 
 class MyApp extends StatelessWidget {
   @override
