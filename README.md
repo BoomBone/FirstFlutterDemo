@@ -34,3 +34,37 @@ decoration: TextDecoration.underline,
 decorationStyle: TextDecorationStyle.solid,
 ),),
 ```
+
+## Widget Container
+
+1.对齐,填充
+示例
+```
+//对齐
+alignment: Alignment.center,
+//内边距
+padding: const EdgeInsets.all(10.0),
+//外边距
+margin: const EdgeInsets.fromLTRB(10.0, 50.0, 10.0, 0.0),
+//装饰，渐变
+decoration: new BoxDecoration(
+        gradient: const LinearGradient(
+            colors: [Colors.amberAccent, Colors.red, Colors.pink]),
+            border: Border.all(
+              width: 2.0,
+              color: Colors.lightBlue
+            )
+      ),
+```
+
+## Widget Image
+```
+child: new Image.network(
+    'http://pic37.nipic.com/20140209/2531170_112946779000_2.jpg',
+    fit: BoxFit.contain,
+    repeat: ImageRepeat.repeat,
+    //颜色融合
+    color: Colors.greenAccent,
+    colorBlendMode: BlendMode.darken,
+  ),
+```
