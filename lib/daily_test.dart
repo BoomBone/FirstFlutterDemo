@@ -45,20 +45,42 @@ class DailyTest extends StatelessWidget {
 //        ),
 //      ),
 //    );
+//    return new MaterialApp(
+//      home: Scaffold(
+//        body: new Container(
+//          child: new Image.network(
+//            'http://pic37.nipic.com/20140209/2531170_112946779000_2.jpg',
+//            fit: BoxFit.contain,
+//            repeat: ImageRepeat.repeat,
+//            //颜色融合
+//            color: Colors.greenAccent,
+//            colorBlendMode: BlendMode.darken,
+//          ),
+//          width: 600.0,
+//          height: 200.0,
+//          color: Colors.lightBlue,
+//        ),
+//      ),
+//    );
     return new MaterialApp(
       home: Scaffold(
-        body: new Container(
-          child: new Image.network(
-            'http://pic37.nipic.com/20140209/2531170_112946779000_2.jpg',
-            fit: BoxFit.contain,
-            repeat: ImageRepeat.repeat,
-            //颜色融合
-            color: Colors.greenAccent,
-            colorBlendMode: BlendMode.darken,
+        body: Container(
+          child: ListView(
+            children: <Widget>[
+              new ListTile(
+                leading: new Icon(Icons.ac_unit),
+                title: new Text('ac_unit'),
+              ),
+              new ListTile(
+                leading: new Icon(Icons.access_alarm),
+                title: new Text('access_alarm'),
+              ),
+              new ListTile(
+                leading: new Icon(Icons.beach_access),
+                title: new Text('beach_access'),
+              ),
+            ],
           ),
-          width: 600.0,
-          height: 200.0,
-          color: Colors.lightBlue,
         ),
       ),
     );
